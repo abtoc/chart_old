@@ -11,4 +11,8 @@ class Msg extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function msg()
+    {
+        return $this->hasMany('App\Head');
+    }
 }

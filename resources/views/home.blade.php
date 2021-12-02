@@ -20,6 +20,7 @@
                                 $partner = \App\User::find($head->partner_id);   
                             @endphp
                             <a href="{{ route('message.index', ['user' => $partner->id]) }}" class="list-group-item list-group-item-action">
+                                <div class="date_time_info">{{ $msg->created_at->format('m/d G:m') }}</div>
                                 <h5>{{ $partner->name }}</h5>
                                 <p>{!! nl2br(e($matches[0])) !!}</p>
                             </a>

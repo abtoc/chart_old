@@ -10986,7 +10986,7 @@ iPhoneのメッセージ風
 .kaiwa.imessage .fukidasi {
   position: relative;
   display: inline-block;
-  max-width: 80%;
+  max-width: 192px;
   margin: 1px 10px 6px;
   padding: 9px 14px;
   border-radius: 19px;
@@ -11046,5 +11046,12 @@ iPhoneのメッセージ風
 
 .kaiwa.imessage .fukidasi.notail::after {
   content: none;
+}
+
+/* 時間 */
+
+.date_time_info {
+  color: darkgray;
+  font-size: 0.8em;
 }
 

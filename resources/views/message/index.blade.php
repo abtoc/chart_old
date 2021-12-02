@@ -16,9 +16,15 @@
                     <div class="kaiwa imessage mt-2">
                         @foreach($messages as $message)
                                 @if($message->send)
-                                    <div class="fukidasi right">{!! nl2br(e($message->msg->body)) !!}</div>
+                                    <div class="fukidasi right">
+                                        {!! nl2br(e($message->msg->body)) !!}</br>
+                                        <div class="date_time_info">{{ $message->msg->created_at->format('m/d H:G') }}</div>
+                                    </div>
                                 @else
-                                    <div class="fukidasi left">{!! nl2br(e($message->msg->body)) !!}</div>
+                                    <div class="fukidasi left">
+                                        {!! nl2br(e($message->msg->body)) !!}</br>
+                                        <div class="date_time_info">{{ $message->msg->created_at->format('m/d H:G') }}</div>
+                                    </div>
                                 @endif
                         @endforeach
                     </div>
